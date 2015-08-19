@@ -1,3 +1,4 @@
 class Restaurant < ActiveRecord::Base
-  attr_accessible :address, :name, :phone, :website
+	mount_uploader :image, ImageUploader
+  attr_accessible :address, :name, :phone, :website, :image
 end
