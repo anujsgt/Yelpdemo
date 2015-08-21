@@ -12,3 +12,4 @@ gem 'rails_12factor', group: :production
 gem 'pg', group: :production
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'fog', "~> 1.3.1"
