@@ -14,3 +14,6 @@ gem 'carrierwave'
 gem 'mini_magick'
 gem 'fog', "~> 1.3.1"
 gem 'devise'
+gem 'coffee-script'
+gem 'sass'
+gem 'coffee-script-source', '1.8.0'
