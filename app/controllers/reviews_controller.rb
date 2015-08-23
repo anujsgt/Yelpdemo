@@ -1,5 +1,6 @@
 class ReviewsController < ApplicationController
   before_filter :set_review, only: [:edit, :update, :destroy]
+  before_filter :set_restaurant
   before_filter :authenticate_user!
 
   respond_to :html
@@ -15,6 +16,8 @@ class ReviewsController < ApplicationController
   def create
     @review = Review.new(params[:review])
     @review.user_id = current_user.id
+    @review.restaurant_id = @restaurant.id
+
      respond_to do |format|
       if @review.save
         format.html { redirect_to root_path, notice: "Review was successfully created." }
@@ -50,4 +53,8 @@ end
     def set_review
       @review = Review.find(params[:id])
     end
+
+    def set_restaurant
+      @restaurant = Restaurant.find(params[:restaurant_id])
+  end
 end

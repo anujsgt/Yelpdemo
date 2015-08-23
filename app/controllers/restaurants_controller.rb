@@ -1,4 +1,5 @@
 class RestaurantsController < ApplicationController
+  
   # GET /restaurants
   # GET /restaurants.json
   def index
